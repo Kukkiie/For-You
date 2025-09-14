@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for you ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg" id="bg"></div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>❤</span></div>
+        <div>
+          <h1 class="title" id="pageTitle">For P'Jeemmm</h1>
+          <p class="subtitle" id="subtitle">a tiny page coded by Kukkie</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="grid">
+        <div>
+          <h2>hey <span id="partnerName">you</span> 👋🏼</h2>
+          <p id="intro">
+            i coded this little page just for you. click a button below when you’re ready for a small surprise 🤭
+          </p>
+
+          <div class="cta-row">
+            <button class="btn" id="openLetter">open my message</button>
+            <button class="btn secondary" id="playBtn">play the 15-sec heart catch</button>
+            <!-- new button to show image -->
+            <button class="btn secondary" onclick="document.getElementById('lonelyDlg').showModal()">
+              รูปไว้ดูยามเหงา ☺️
+            </button>
+          </div>
+        </div>
+
+        <div class="game">
+          <canvas id="game" width="640" height="360"></canvas>
+          <div class="stats">
+            <span class="tag">score: <strong id="score">0</strong></span>
+            <span class="tag">time: <strong id="time">15</strong></span>
+            <button class="btn" id="start">start game</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>coded by ❤ Kukkie</footer>
+  </div>
+
+  <!-- existing letter modal -->
+  <dialog id="dlg">
+    <div class="modal">
+      <div class="paper">
+        <button class="x" id="close">x</button>
+        <h2 id="letterTitle">a note for you</h2>
+        <div class="type" id="letter"></div>
+        <p id="ps" style="margin-top:10px;font-style:italic"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- new modal to show the image -->
+  <dialog id="lonelyDlg">
+    <img src="lonely.jpg" alt="รูปไว้ดูยามเหงา" style="max-width:100%;border-radius:12px;">
+    <br>
+    <button class="btn secondary" onclick="document.getElementById('lonelyDlg').close()">close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
